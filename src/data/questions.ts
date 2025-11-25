@@ -20,7 +20,7 @@ export const sections: Section[] = [
   {
     id: 1,
     name: "Risk Governance Framework",
-    route: "/assessment/section-1",
+    route: "/assessment/section/1",
     questions: [
       {
         id: "q1",
@@ -82,7 +82,7 @@ export const sections: Section[] = [
   {
     id: 2,
     name: "Material Controls Identification",
-    route: "/assessment/section-2",
+    route: "/assessment/section/2",
     questions: [
       {
         id: "q6",
@@ -144,7 +144,7 @@ export const sections: Section[] = [
   {
     id: 3,
     name: "Monitoring & Testing",
-    route: "/assessment/section-3",
+    route: "/assessment/section/3",
     questions: [
       {
         id: "q11",
@@ -206,7 +206,7 @@ export const sections: Section[] = [
   {
     id: 4,
     name: "Board Oversight",
-    route: "/assessment/section-4",
+    route: "/assessment/section/4",
     questions: [
       {
         id: "q16",
@@ -268,7 +268,7 @@ export const sections: Section[] = [
   {
     id: 5,
     name: "Audit Committee Engagement",
-    route: "/assessment/section-5",
+    route: "/assessment/section/5",
     questions: [
       {
         id: "q21",
