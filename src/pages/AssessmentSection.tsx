@@ -30,7 +30,7 @@ const AssessmentSection = () => {
     if (sectionNumber === 1) {
       navigate('/assessment/profile');
     } else {
-      navigate(`/assessment/section-${sectionNumber - 1}`);
+      navigate(`/assessment/section/${sectionNumber - 1}`);
     }
   };
 
@@ -41,7 +41,7 @@ const AssessmentSection = () => {
       if (sectionNumber === 5) {
         navigate('/results');
       } else {
-        navigate(`/assessment/section-${sectionNumber + 1}`);
+        navigate(`/assessment/section/${sectionNumber + 1}`);
       }
     }
   };

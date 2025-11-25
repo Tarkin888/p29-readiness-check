@@ -49,7 +49,7 @@ const CompanyProfile = () => {
     e.preventDefault();
     if (validate()) {
       setCompanyProfile(formData);
-      navigate('/assessment/section-1');
+      navigate('/assessment/section/1');
     }
   };
 
