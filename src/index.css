@@ -8,39 +8,39 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Protecht Brand Colors */
-    --protecht-red: 2 95% 48%;        /* #F3130A - Scarlet Red */
-    --protecht-gold: 35 100% 34%;     /* #AC7500 - Pirate Gold */
-    --protecht-navy: 215 25% 24%;     /* #2D3A4B - Dark Grey/Navy */
+    /* Protecht Brand Colors - Actual GRC Platform UI Colors */
+    --protecht-navy: 235 57% 19%;         /* #151A4D - Dark Navy Blue */
+    --protecht-blue: 217 100% 50%;        /* #0063FF - Bright Blue */
+    --protecht-lavender: 227 52% 89%;     /* #D4DAF0 - Light Blue/Lavender */
     
-    /* Base Theme */
-    --background: 0 0% 98%;             /* Warm off-white */
-    --foreground: 215 25% 24%;          /* Protecht Navy for text */
+    /* Base Theme - Using Protecht Colors */
+    --background: 0 0% 98%;                /* Warm off-white */
+    --foreground: 235 57% 19%;             /* Protecht Navy for text */
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 24%;
+    --card-foreground: 235 57% 19%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 24%;
+    --popover-foreground: 235 57% 19%;
 
-    --primary: 2 95% 48%;               /* Protecht Red */
+    --primary: 235 57% 19%;                /* Protecht Navy */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 100% 34%;           /* Protecht Gold */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 227 52% 89%;              /* Protecht Lavender */
+    --secondary-foreground: 235 57% 19%;
 
-    --muted: 220 13% 95%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 227 52% 95%;
+    --muted-foreground: 235 40% 40%;
 
-    --accent: 35 100% 34%;              /* Protecht Gold */
+    --accent: 217 100% 50%;                /* Protecht Bright Blue */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 2 95% 48%;
+    --border: 227 52% 85%;
+    --input: 227 52% 85%;
+    --ring: 217 100% 50%;
 
     --radius: 0.75rem;
 
@@ -58,10 +58,10 @@ All colors MUST be HSL.
     --info: 217 91% 60%;
 
     /* Protecht-specific Design Tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(2 95% 48% / 0.08), hsl(35 100% 34% / 0.05));
-    --shadow-card: 0 1px 3px hsl(215 25% 24% / 0.08), 0 1px 2px hsl(215 25% 24% / 0.06);
-    --shadow-card-hover: 0 10px 15px hsl(215 25% 24% / 0.1), 0 4px 6px hsl(215 25% 24% / 0.05);
-    --shadow-button: 0 4px 6px hsl(2 95% 48% / 0.2);
+    --gradient-hero: linear-gradient(135deg, hsl(227 52% 89% / 0.4), hsl(217 100% 50% / 0.05));
+    --shadow-card: 0 1px 3px hsl(235 57% 19% / 0.08), 0 1px 2px hsl(235 57% 19% / 0.06);
+    --shadow-card-hover: 0 10px 15px hsl(235 57% 19% / 0.1), 0 4px 6px hsl(235 57% 19% / 0.05);
+    --shadow-button: 0 4px 6px hsl(217 100% 50% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
@@ -73,7 +73,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

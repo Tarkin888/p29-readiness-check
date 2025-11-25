@@ -48,9 +48,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         protecht: {
-          red: "hsl(var(--protecht-red))",
-          gold: "hsl(var(--protecht-gold))",
           navy: "hsl(var(--protecht-navy))",
+          blue: "hsl(var(--protecht-blue))",
+          lavender: "hsl(var(--protecht-lavender))",
         },
         maturity: {
           initial: "hsl(var(--maturity-initial))",
@@ -63,6 +63,10 @@ export default {
         warning: "hsl(var(--warning))",
         error: "hsl(var(--error))",
         info: "hsl(var(--info))",
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        sans: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
