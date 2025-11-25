@@ -201,7 +201,7 @@ const Results = () => {
           <Button 
             size="lg" 
             onClick={() => setShowLeadCapture(true)}
-            className="text-lg px-8 py-6"
+            className="text-lg px-8 py-6 bg-accent hover:bg-accent/90"
           >
             <Download className="mr-2 w-5 h-5" />
             Download Your Full Report
