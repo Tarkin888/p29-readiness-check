@@ -219,7 +219,7 @@ const Results = () => {
           <Button 
             size="lg" 
             variant="outline"
-            onClick={() => window.open('https://www.protecht.com.au/solutions/protecht-erm', '_blank')}
+            onClick={() => window.open('https://www.protechtgroup.com/en-au/', '_blank')}
             className="text-lg px-8 py-6"
           >
             Explore Protecht Platform
