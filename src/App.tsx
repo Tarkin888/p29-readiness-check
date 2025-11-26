@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AssessmentProvider } from "./context/AssessmentContext";
+import { ScrollToTop } from "./components/ScrollToTop";
 import Landing from "./pages/Landing";
 import CompanyProfile from "./pages/CompanyProfile";
 import AssessmentSection from "./pages/AssessmentSection";
@@ -19,6 +20,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/assessment/profile" element={<CompanyProfile />} />
