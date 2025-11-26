@@ -5,9 +5,14 @@ import { useAssessment } from '@/context/AssessmentContext';
 
 const Landing = () => {
   const navigate = useNavigate();
-  const { state, getCompletionPercentage } = useAssessment();
+  const { state, getCompletionPercentage, clearAssessment } = useAssessment();
   const hasExistingData = state.companyProfile !== null || Object.keys(state.answers).length > 0;
   const completionPercentage = getCompletionPercentage();
+
+  const handleStartNew = () => {
+    clearAssessment();
+    navigate('/assessment/profile');
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -28,15 +33,28 @@ const Landing = () => {
             </p>
 
             {hasExistingData ? (
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
-                  onClick={() => navigate('/assessment/profile')}
-                  className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all"
-                >
-                  Resume Assessment ({completionPercentage}% Complete)
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+              <div className="flex flex-col gap-4 items-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    onClick={() => navigate('/assessment/profile')}
+                    className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all"
+                  >
+                    Resume Assessment ({completionPercentage}% Complete)
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    onClick={handleStartNew}
+                    className="text-lg px-8 py-6 border-2"
+                  >
+                    Start New Assessment
+                  </Button>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Starting a new assessment will clear your current progress
+                </p>
               </div>
             ) : (
               <Button 
