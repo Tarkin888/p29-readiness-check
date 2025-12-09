@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Shield, BarChart3, Calendar, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAssessment } from '@/context/AssessmentContext';
 
 const Landing = () => {
@@ -134,9 +134,9 @@ const Landing = () => {
               Protecht + Zia Rezvi: Achieving Confidence for Your Provision 29 Declaration
             </p>
             <div className="flex justify-center gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               <span>|</span>
-              <a href="#" className="hover:text-primary transition-colors">About This Assessment</a>
+              <Link to="/about-assessment" className="hover:text-primary transition-colors">About This Assessment</Link>
             </div>
           </div>
         </div>
