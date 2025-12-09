@@ -78,6 +78,40 @@ All colors MUST be HSL.
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Prevent blue text selection highlighting on form labels and interactive elements */
+  label,
+  button,
+  [role="button"],
+  [role="combobox"],
+  [role="listbox"],
+  [role="option"] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Remove tap highlight on mobile */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Custom selection color for text that should be selectable */
+  ::selection {
+    background-color: hsl(var(--accent) / 0.2);
+    color: hsl(var(--foreground));
+  }
+
+  ::-moz-selection {
+    background-color: hsl(var(--accent) / 0.2);
+    color: hsl(var(--foreground));
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: hsl(var(--foreground));
