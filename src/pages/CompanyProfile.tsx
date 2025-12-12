@@ -113,6 +113,8 @@ const CompanyProfile = () => {
                     <SelectValue placeholder="Select size" />
                   </SelectTrigger>
                   <SelectContent>
+                    <SelectItem value="1-49">1-49 employees</SelectItem>
+                    <SelectItem value="50-249">50-249 employees</SelectItem>
                     <SelectItem value="250-999">250-999 employees</SelectItem>
                     <SelectItem value="1000-4999">1,000-4,999 employees</SelectItem>
                     <SelectItem value="5000-9999">5,000-9,999 employees</SelectItem>
