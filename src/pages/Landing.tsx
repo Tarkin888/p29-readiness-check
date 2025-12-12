@@ -37,7 +37,14 @@ const Landing = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
                     size="lg" 
-                    onClick={() => navigate('/assessment/profile')}
+                    onClick={() => {
+                      // Navigate to current section if profile exists, otherwise to profile
+                      if (state.companyProfile) {
+                        navigate(`/assessment/section/${state.currentSection}`);
+                      } else {
+                        navigate('/assessment/profile');
+                      }
+                    }}
                     className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all"
                   >
                     Resume Assessment ({completionPercentage}% Complete)
