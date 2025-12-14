@@ -61,7 +61,6 @@ export const LeadCaptureModal = ({ open, onClose }: LeadCaptureModalProps) => {
     try {
       // In production, this would send to: [PROTECHT_WEBHOOK_URL]
       // For now, we'll store locally and show success
-      console.log('Lead capture payload:', payload);
       localStorage.setItem('p29_lead_captured', JSON.stringify(payload));
       
       setIsSuccess(true);
