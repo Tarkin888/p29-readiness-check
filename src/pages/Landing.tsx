@@ -140,10 +140,12 @@ const Landing = () => {
             <p className="text-lg font-semibold text-foreground mb-4">
               Protecht + Zia Rezvi: Achieving Confidence for Your Provision 29 Declaration
             </p>
-            <div className="flex justify-center gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               <span>|</span>
               <Link to="/about-assessment" className="hover:text-primary transition-colors">About This Assessment</Link>
+              <span>|</span>
+              <Link to="/demo-results" className="hover:text-primary transition-colors">View Demo Results</Link>
             </div>
           </div>
         </div>
