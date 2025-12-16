@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { CircularProgress } from '@/components/CircularProgress';
 import { Download, Calendar, ArrowLeft, AlertTriangle, Target, Shield, FileCheck } from 'lucide-react';
-import { BarChart, Bar, XAxis, ResponsiveContainer, Cell } from 'recharts';
+
 
 const DemoResults = () => {
   // Demo mock data
@@ -17,11 +17,6 @@ const DemoResults = () => {
     { name: 'Audit Committee Engagement', percentage: 65 },
   ];
 
-  const benchmarkData = [
-    { name: 'Your Score', value: 65, color: 'hsl(var(--accent))' },
-    { name: 'FTSE 100 Median', value: 72, color: 'hsl(var(--muted-foreground))' },
-    { name: 'FTSE 350 Median', value: 58, color: 'hsl(var(--muted-foreground))' },
-  ];
 
   const priorityAreas = [
     {
@@ -97,30 +92,6 @@ const DemoResults = () => {
             </div>
           </div>
 
-          {/* FTSE Benchmarking Chart */}
-          <div className="mb-16 bg-card border border-border rounded-xl p-8">
-            <h2 className="text-2xl font-bold mb-6">FTSE Benchmarking</h2>
-            <div className="h-64">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={benchmarkData}>
-                  <XAxis 
-                    dataKey="name" 
-                    axisLine={false}
-                    tickLine={false}
-                    tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
-                  />
-                  <Bar dataKey="value" radius={[8, 8, 0, 0]}>
-                    {benchmarkData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Bar>
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-            <p className="text-muted-foreground mt-4 text-sm text-center">
-              Your position relative to sector peers (anonymized benchmark data)
-            </p>
-          </div>
 
           {/* Top Priority Areas */}
           <div className="mb-16">
