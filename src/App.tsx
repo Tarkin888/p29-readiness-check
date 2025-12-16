@@ -9,6 +9,7 @@ import Landing from "./pages/Landing";
 import CompanyProfile from "./pages/CompanyProfile";
 import AssessmentSection from "./pages/AssessmentSection";
 import Results from "./pages/Results";
+import DemoResults from "./pages/DemoResults";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AboutAssessment from "./pages/AboutAssessment";
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/assessment/profile" element={<CompanyProfile />} />
             <Route path="/assessment/section/:sectionId" element={<AssessmentSection />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/demo-results" element={<DemoResults />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/about-assessment" element={<AboutAssessment />} />
             <Route path="*" element={<NotFound />} />
