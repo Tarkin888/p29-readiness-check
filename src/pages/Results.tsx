@@ -170,31 +170,6 @@ const Results = () => {
           </div>
         </div>
 
-        {/* Benchmark Comparison */}
-        <div className="mb-16 bg-card border border-border rounded-xl p-8">
-          <h2 className="text-2xl font-bold mb-6">How You Compare to FTSE Peers</h2>
-          <div className="h-64">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={benchmarkData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                <XAxis dataKey="name" />
-                <YAxis domain={[0, 100]} />
-                <Tooltip />
-                <Bar dataKey="value" radius={[8, 8, 0, 0]}>
-                  {benchmarkData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-          <p className="text-muted-foreground mt-4">
-            Your Provision 29 readiness score of {percentage}% positions you among FTSE companies. 
-            {percentage >= 72 ? ' You are above the FTSE 100 average.' :
-             percentage >= 58 ? ' You are above the FTSE 350 average but below FTSE 100.' :
-             ' There is significant opportunity to improve your readiness.'}
-          </p>
-        </div>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
